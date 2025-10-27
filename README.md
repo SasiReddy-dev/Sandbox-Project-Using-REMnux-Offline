@@ -1,3 +1,7 @@
+## 👨‍💻 Contributors
+**Sasi Reddy** — Project Developer  
+Internship Project under **Nuclear Fuel Complex (NFC)**
+
 # Sandbox Project Using REMnux (Offline)
 
 This project was developed as part of an internship at **NFC (Nuclear Fuel Complex)**.  
