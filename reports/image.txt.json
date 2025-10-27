@@ -1,0 +1,15 @@
+{
+  "filename": "image.txt",
+  "sha256": "26a018b0ac1eb647b580150105f8f2e48d2c24717250b6e927f084f0b67cb948",
+  "md5": "7f949cfa1c44cb4176ff3fbde1afb74e",
+  "size_bytes": 12,
+  "size_kb": 0.01,
+  "size_mb": 0.0,
+  "mime_type": "text/plain",
+  "timestamp": "2025-10-25 14:31:30",
+  "file_category": "Text File",
+  "verdict": "Suspicious",
+  "alerts": [
+    "Extension-MIME mismatch (file type does not match extension)"
+  ]
+}

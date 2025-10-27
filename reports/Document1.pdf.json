@@ -1,0 +1,15 @@
+{
+  "filename": "Document1.pdf",
+  "sha256": "df92730f8e5f39d9d1ad0f3516c0eb65d8f960c9d6464a80cc632086d560eee8",
+  "md5": "8b5c670ec7c79b8eeb8af9d433964ded",
+  "size_bytes": 82106,
+  "size_kb": 80.18,
+  "size_mb": 0.08,
+  "mime_type": "application/pdf",
+  "timestamp": "2025-10-23 14:50:58",
+  "file_category": "Document / PDF",
+  "verdict": "Clean",
+  "alerts": [
+    "No suspicious indicators detected"
+  ]
+}

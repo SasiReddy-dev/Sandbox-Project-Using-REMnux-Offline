@@ -1,0 +1,15 @@
+{
+  "filename": "90.txt",
+  "sha256": "e689b29dcbbb2aba6a247da81f9ad491ad773379d53c67992fe1a4f82ba948ea",
+  "md5": "aa098948718e6a1453c055518bd16b35",
+  "size_bytes": 57,
+  "size_kb": 0.06,
+  "size_mb": 0.0,
+  "mime_type": "text/plain",
+  "timestamp": "2025-10-23 13:24:24",
+  "file_category": "Text File",
+  "verdict": "Suspicious",
+  "alerts": [
+    "Extension-MIME mismatch (file type does not match extension)"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "entropy": 4.0014,
+  "suspicious_string_hits": [],
+  "sample_strings": [
+    "gjuuuugycty",
+    "rfffffyhju",
+    "asxgtr",
+    "ertghj,"
+  ],
+  "simulated_timeline": [
+    {
+      "time": "2025-10-23 13:24:32",
+      "event": "Simulated process started"
+    },
+    {
+      "time": "2025-10-23 13:24:32",
+      "event": "Scanned memory-like artifacts (simulation)"
+    },
+    {
+      "time": "2025-10-23 13:24:32",
+      "event": "Found 0 suspicious keyword(s) in strings"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "entropy": 7.7341,
+  "suspicious_string_hits": [],
+  "sample_strings": [
+    "%PDF-1.7",
+    "3 0 obj",
+    "<</Author (developer1) /Comments () /Company () /CreationDate (D:20251021143126+05'30') /Creator (WPS Writer) /Keywords () /ModDate (D:20251021143126+05'30') /Producer () /SourceModified (D:20251021143126+05'30') /Subject () /Title () /Trapped /False>>",
+    "endobj",
+    "8 0 obj",
+    "<</BitsPerComponent 8 /ColorSpace /DeviceRGB /Filter /DCTDecode /Height 839 /Length 80696 /Subtype /Image /Type /XObject /Width 1280>>",
+    "stream",
+    "JFIF",
+    " $.' \",#",
+    "(7),01444",
+    "'9=82<.342",
+    "!22222222222222222222222222222222222222222222222222",
+    "$3br",
+    "%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz",
+    "&'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz",
+    "FG]N",
+    "sW^h",
+    "5irS",
+    "t*A^KC",
+    "W2]I,",
+    "P[F+",
+    "UYj'",
+    "XA46SK",
+    "Q7(J",
+    "m* 3"
+  ],
+  "simulated_timeline": [
+    {
+      "time": "2025-10-23 14:53:42",
+      "event": "Simulated process started"
+    },
+    {
+      "time": "2025-10-23 14:53:42",
+      "event": "Scanned memory-like artifacts (simulation)"
+    },
+    {
+      "time": "2025-10-23 14:53:42",
+      "event": "Found 0 suspicious keyword(s) in strings"
+    }
+  ]
+}

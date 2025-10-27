@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analysis Report</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #ffffff;
+      margin: 0;
+      padding: 40px;
+      color: #222;
+    }
+
+    h1 {
+      color: #1e2a78;
+      text-align: center;
+      border-bottom: 2px solid #1e2a78;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+    }
+
+    .report-container {
+      max-width: 800px;
+      margin: 0 auto 40px auto;
+      background: #f9f9f9;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    p {
+      margin: 10px 0;
+      line-height: 1.6;
+    }
+
+    .label {
+      color: #1e2a78;
+      font-weight: bold;
+    }
+
+    .size-box {
+      margin-left: 20px;
+    }
+
+    hr {
+      margin: 25px 0;
+      border: none;
+      border-top: 1px solid #ccc;
+    }
+
+    h3 {
+      color: #1e2a78;
+      margin-bottom: 15px;
+    }
+
+    .back-btn {
+      display: block;
+      margin: 30px auto;
+      background-color: #1e2a78;
+      color: white;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 15px;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .back-btn:hover {
+      background-color: #2a3fba;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Static Analysis Report</h1>
+
+  <div class="report-container" id="reportBox"></div>
+
+  <button class="back-btn" onclick="window.location.href='/'">← Back to Upload</button>
+
+<script>
+  const reportData = JSON.parse(localStorage.getItem("analysisReport"));
+  const dynamicLog = JSON.parse(localStorage.getItem("dynamicLog"));
+  const excelPath = localStorage.getItem("excelPath");
+
+  const reportBox = document.getElementById("reportBox");
+  let htmlContent = "";
+
+  // Static report section
+  if (reportData) {
+    htmlContent += `
+      <h2>Static Analysis Report</h2>
+      <p><span class="label">File:</span> ${reportData.filename}</p>
+      <p><span class="label">SHA256:</span> ${reportData.sha256}</p>
+      <p><span class="label">MD5:</span> ${reportData.md5}</p>
+
+      <p><span class="label">File Size:</span></p>
+      <div class="size-box">
+        <p>KB → ${reportData.size_kb}</p>
+        <p>Bytes → ${reportData.size_bytes}</p>
+        <p>MB → ${reportData.size_mb}</p>
+      </div>
+
+      <p><span class="label">MIME Type:</span> ${reportData.mime_type}</p>
+      <p><span class="label">Timestamp:</span> ${reportData.timestamp}</p>
+    `;
+    if (excelPath) {
+      htmlContent += `<button class="back-btn" onclick="window.location.href='${excelPath}'">⬇️ Download Excel Report</button>`;
+    }
+  }
+
+  // Dynamic report section
+  if (dynamicLog) {
+    htmlContent += `
+      <hr/>
+      <h2>Simulated Dynamic Analysis</h2>
+      <p><strong>Entropy:</strong> ${dynamicLog.entropy}</p>
+      <p><strong>Suspicious Hits:</strong> ${dynamicLog.suspicious_string_hits.length ? dynamicLog.suspicious_string_hits.join(", ") : "None"}</p>
+      <p><strong>Sample Strings (Top):</strong><br>${dynamicLog.sample_strings.join("<br>")}</p>
+    `;
+  }
+
+  // If nothing at all
+  if (!reportData && !dynamicLog) {
+    htmlContent = "<p>No analysis data found.</p>";
+  }
+
+  reportBox.innerHTML = htmlContent;
+</script>
+
+</body>
+</html>
